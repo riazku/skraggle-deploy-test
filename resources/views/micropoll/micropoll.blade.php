@@ -45,7 +45,7 @@
     </div>
 
     <div>
-     @include('components.content_tab')
+     @include('components.micropoll_tab')
     </div>
 
 </div>
@@ -120,7 +120,9 @@
         });
 
         // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('content-mycampaign-tab');
+        const defaultTabButton = document.getElementById('micropoll-mycampaign-tab');
+         // const defaultTabButton = document.querySelector('.tab-button.active');
+         // const defaultTabButton = document.querySelector('.tab-button:first-child'); // or any other logic to determine the default tab
         if (defaultTabButton) {
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }

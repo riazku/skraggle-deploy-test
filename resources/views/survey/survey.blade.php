@@ -45,7 +45,7 @@
     </div>
 
     <div>
-     @include('components.content_tab')
+     @include('components.survey_tab')
     </div>
 
 </div>
@@ -120,7 +120,7 @@
         });
 
         // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('content-mycampaign-tab');
+        const defaultTabButton = document.getElementById('survey-mycampaign-tab');
         if (defaultTabButton) {
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }

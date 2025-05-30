@@ -53,10 +53,10 @@
                         <li><a href="{{ route('automation.automation') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Automation</a></li>
                         <li><a href="{{ route('newsletter.newsletter') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Newsletter</a></li>
                         <li><a href="{{ route('recurring.recurring') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Recurring</a></li>
-                        <li><a href="{{ route('intertaction.interaction') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Interacation</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Content</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Micro Poll</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Survey</a></li>
+                        <li><a href="{{ route('interaction.interaction') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Interaction</a></li>
+                        <li><a href="{{ route('content.content') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Content</a></li>
+                        <li><a href="{{ route('micropoll.micropoll') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Micro Poll</a></li>
+                        <li><a href="{{ route('survey.survey') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Survey</a></li>
                     </ul>
                 </li>
 
@@ -74,8 +74,14 @@
                     <ul x-show="openMenu === 'reports'"
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Report 1</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Report 2</a></li>
+                        <li><a href="{{ route('user.user') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Users</a></li>
+                        <li><a href="{{ route('revenue.revenue') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Renenue</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Site Activity</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Email Activity</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Ecommerce</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Catlog</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Exports</a></li>
+                    
                     </ul>
                 </li>
 
@@ -93,8 +99,14 @@
                     <ul x-show="openMenu === 'users'"
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">User List</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Add User</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Segments & Lists</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">User Profile CRM</a></li>
+                        
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Analytics</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Import Users</a></li>
+                        
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Settings</a></li>
+                       
                     </ul>
                 </li>
 
@@ -112,8 +124,15 @@
                     <ul x-show="openMenu === 'setup'"
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Settings</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Configuration</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Catalog</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Gallery</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Cuppon Codes</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">WebPush</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Activity Feed</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Data Import</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Pages</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Integrations</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Algorithms</a></li>
                     </ul>
                 </li>
 
@@ -131,8 +150,14 @@
                     <ul x-show="openMenu === 'settings'"
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Settings</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Account Info</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Account Settings</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Account History</a></li>
                         <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Configuration</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Email Settings</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Access</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">My Profile</a></li>
+                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Bilings</a></li>
                     </ul>
                 </li>
             </ul>

@@ -4,9 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Overviewtabcontroller;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\AutomationController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\InteractionController;
+use App\Http\Controllers\MicropollController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RecurringController;
+use App\Http\Controllers\RevenueController;
+use App\Http\Controllers\SurveyController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -66,9 +71,51 @@ Route::get('/interaction/tabs/interaction_mycampaign_tab', [InteractionControlle
 Route::get('/interaction/tabs/interaction_scenarios_tab', [InteractionController::class, 'getInteractionScenariosContent'])->name('interaction.tabs.interaction_scenarios_tab');
 
 
+Route::get('/content/tabs/content_mycampaign_tab', [ContentController::class, 'getContentMyCampaignContent'])->name('content.tabs.content_mycampaign_tab');
+Route::get('/content/tabs/content_scenarios_tab', [ContentController::class, 'getContentScenariosContent'])->name('content.tabs.content_scenarios_tab');
+
+
+
+Route::get('/micropoll/tabs/micropoll_mycampaign_tab', [MicropollController::class, 'getMicropollMyCampaignContent'])->name('micropoll.tabs.micropoll_mycampaign_tab');
+
+Route::get('/micropoll/tabs/micropoll_scenarios_tab', [MicropollController::class, 'getMicropollScenariosContent'])->name('micropoll.tabs.micropoll_scenarios_tab');
+
+
+
+Route::get('/survey/tabs/survey_mycampaign_tab', [SurveyController::class, 'getSurveyMyCampaignContent'])->name('survey.tabs.survey_mycampaign_tab');
+Route::get('/survey/tabs/survey_scenarios_tab', [SurveyController::class, 'getSurveyScenariosContent'])->name('survey.tabs.survey_scenarios_tab');
+
+
+
+Route::get('/user/tabs/user_overview_tab', [UserController::class, 'getUserOverviewContent'])->name('user.tabs.user_overview_tab');
+Route::get('/user/tabs/user_visitor_tab', [UserController::class, 'getUserVisitorContent'])->name('user.tabs.user_visitor_tab');
+
+
+
+
+
+
+
+// Route::get('/revenue/tabs/revenue_campaign_tab', [RevenueController::class, 'getRevenueCampaignConten'])->name('revenue.tabs.revenue_campaign_tab');
+// Route::get('/user/tabs/revenue_report_tab', [RevenueController::class, 'getRevenueReportContent'])->name('revenue.tabs.revenue_report_tab');
+
 
 
 // ...existing code...
+
+Route::prefix('revenue/tabs')->name('revenue.tabs.')->group(function () {
+    Route::get('/campaign', function () {
+        return view('revenue.tabs.revenue_campaign_tab');
+    })->name('revenue_campaign_tab');
+
+    Route::get('/report', function () {
+        return view('revenue.tabs.revenue_report_tab');
+    })->name('revenue_report_tab');
+});
+
+
+
+
 
 Route::get('/campaigns', [CampaignController::class, 'campaigns'])->name('campaigns.campaigns');
 
@@ -80,4 +127,14 @@ Route::get('/recurring', [RecurringController::class, 'recurring'])->name('recur
 
 Route::get('/interaction', [InteractionController::class, 'interaction'])->name('interaction.interaction');
 
-// ...existing code...
+Route::get('/content', [ContentController::class, 'content'])->name('content.content');
+
+Route::get('/micropoll', [MicropollController::class, 'micropoll'])->name('micropoll.micropoll');
+
+Route::get('/survey', [SurveyController::class, 'survey'])->name('survey.survey'); 
+
+Route::get('/user', [UserController::class, 'user'])->name('user.user'); 
+
+Route::get('/revenue', [RevenueController::class, 'revenue'])->name('revenue.revenue');
+
+
