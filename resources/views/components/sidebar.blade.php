@@ -17,7 +17,7 @@
         <nav class="flex-grow flex flex-col justify-center w-full items-center">
             <ul>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/Exclude.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
@@ -27,37 +27,37 @@
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/mail-02.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-white rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 rounded-full w-10 h-10 bg-white">
                         <img src="{{ asset('images/content.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/pen-tool-add.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/marketing.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/mdi_donation.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/chart-rose.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>
                 <li class="mb-2">
-                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-lg w-10 h-10">
+                    <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/heroicons_building-office-20-solid.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
                     </a>
                 </li>

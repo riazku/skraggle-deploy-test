@@ -1,188 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Page with Tabs and Charts</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaigns</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white">
+    <div class="container mx-auto p-6">
+      <!-- Tabs -->
+      {{-- <div class="flex space-x-1 mb-6">
+        <button
+          class="px-3 py-1.5 rounded-lg border border-[#CFD5DF80] text-gray-600 text-sm font-semibold"
+        >
+          My Campaigns
+        </button>
+        <button
+          class="px-3 py-1.5 rounded-lg bg-[#CABCF8] text-purple-800 text-sm font-semibold"
+        >
+          Scenarios
+        </button>
+      </div> --}}
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Chart Section -->
+      <div class="bg-[#EEEAFF] p-6 w-full rounded-lg">
+        <h1 class="text-[#551895] text-[18px] font-semibold mb-1">
+          Daily stats about active visitors
+        </h1>
+        <h6 class="text-[#3F3F3F] mb-4 text-sm">
+          Email sent to confirm user subscription to a list.
+        </h6>
+        <canvas id="lineChart" height="50"></canvas>
+      </div>
+    </div>
 
-  <!-- Chart.js included once globally -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+   <script>
+  const labels = ["03–07", "10–14", "17–21", "24–28"];
+  const sentData = [5, 7, 9, 10];
 
-  <style>
-    .chart-container {
-      position: relative;
-      height: 400px;
-      width: 100%;
-    }
-  </style>
-</head>
-<body class="bg-white p-6">
+  // Find max value and its label index
+  const maxVal = Math.max(...sentData);
+  const maxIndex = sentData.indexOf(maxVal);
+  const maxLabel = labels[maxIndex];
 
-  <!-- Tab Buttons -->
-  {{-- <div class="flex space-x-4 mb-4">
-    <button
-      id="interaction-mycampaign-tab"
-      class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded"
-      data-content-route="{{ route('content.tabs.content_mycampaign_tab') }}"
-    >
-      My Campaign
-    </button>
+  const ctx = document.getElementById("lineChart").getContext("2d");
 
-    <button
-      id="interaction-scenarios-tab"
-      class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded"
-      data-content-route="{{ route('content.tabs.content_scenarios_tab') }}"
-    >
-      Scenarios
-    </button>
-  </div> --}}
+ const highlightLabelPlugin = {
+  id: 'highlightLabel',
+  afterDraw(chart) {
+    const {
+      ctx,
+      chartArea: { bottom },
+      scales: { x }
+    } = chart;
 
-  <!-- Tab Content Container -->
-  <div id="tab-content" class="bg-[#EEEAFF] p-6 rounded-lg min-h-[400px]">
-    <!-- AJAX-loaded content goes here -->
-  </div>
+    const label = maxLabel;
+    const xPos = x.getPixelForValue(label);
+    const width = 60; // Balanced size
+    const height = 28;
+    const padding = 6;
 
-  <script>
-    // Chart initialization function
-    function initializeLineChart() {
-      const ctx = document.getElementById("lineChart")?.getContext('2d');
-      if (!ctx) return;
+    ctx.save();
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'white';
+    ctx.roundRect(
+      xPos - width / 2,
+      bottom + 10,
+      width,
+      height,
+      12
+    );
+    ctx.fill();
 
-      const labels = ["03–07", "10–14", "17–21", "24–28"];
-      const sentData = [5, 7, 9, 10];
-      const maxVal = Math.max(...sentData);
-      const maxIndex = sentData.indexOf(maxVal);
-      const maxLabel = labels[maxIndex];
+    // Text styling
+    ctx.fillStyle = 'black';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(label, xPos, bottom + 10 + height / 2);
+    ctx.restore();
+  },
+};
 
-      const highlightLabelPlugin = {
-        id: 'highlightLabel',
-        afterDraw(chart) {
-          const {
-            ctx,
-            chartArea: { bottom },
-            scales: { x }
-          } = chart;
-
-          const label = maxLabel;
-          const xPos = x.getPixelForValue(label);
-          const width = 60;
-          const height = 28;
-
-          ctx.save();
-          ctx.fillStyle = 'white';
-          ctx.strokeStyle = 'white';
-          ctx.roundRect(
-            xPos - width / 2,
-            bottom + 10,
-            width,
-            height,
-            12
-          );
-          ctx.fill();
-
-          ctx.fillStyle = 'black';
-          ctx.font = '12px sans-serif';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillText(label, xPos, bottom + 10 + height / 2);
-          ctx.restore();
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Sent Emails",
+          data: sentData,
+          borderColor: "#5654D4",
+          backgroundColor: "#5654D4",
+          tension: 0.4,
+          fill: false,
+          pointBackgroundColor: "#5654D4",
+          pointBorderColor: "#5654D4",
         },
-      };
-
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: labels,
-          datasets: [
-            {
-              label: "Sent Emails",
-              data: sentData,
-              borderColor: "#5654D4",
-              backgroundColor: "#5654D4",
-              tension: 0.4,
-              fill: false,
-              pointBackgroundColor: "#5654D4",
-              pointBorderColor: "#5654D4",
-            },
-            {
-              label: "Opened Emails",
-              data: [3, 4, 6, 5],
-              borderColor: "#3F3F3F",
-              backgroundColor: "#6B6B6B",
-              tension: 0.4,
-              fill: false,
-              pointBackgroundColor: "#6B6B6B",
-              pointBorderColor: "#6B6B6B",
-            },
-          ],
+        {
+          label: "Opened Emails",
+          data: [3, 4, 6, 5],
+          borderColor: "#3F3F3F",
+          backgroundColor: "#6B6B6B",
+          tension: 0.4,
+          fill: false,
+          pointBackgroundColor: "#6B6B6B",
+          pointBorderColor: "#6B6B6B",
+          
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: true, position: 'top' },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 2,
           },
-          scales: {
-            x: { grid: { display: false } },
-            y: {
-              beginAtZero: true,
-              ticks: { stepSize: 2 },
-              grid: { drawBorder: false },
-            },
-          },
+          grid: { drawBorder: false },
         },
-        plugins: [highlightLabelPlugin],
-      });
-    }
+      },
+    },
+    plugins: [highlightLabelPlugin],
+  });
 
-    // Tab content loader
-    document.addEventListener('DOMContentLoaded', () => {
-      const tabButtons = document.querySelectorAll('.tab-button');
-      const tabContent = document.getElementById('tab-content');
+  // Add rounded rectangle method to CanvasRenderingContext2D if not already
+  CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+    if (w < 2 * r) r = w / 2;
+    if (h < 2 * r) r = h / 2;
+    this.beginPath();
+    this.moveTo(x + r, y);
+    this.arcTo(x + w, y, x + w, y + h, r);
+    this.arcTo(x + w, y + h, x, y + h, r);
+    this.arcTo(x, y + h, x, y, r);
+    this.arcTo(x, y, x + w, y, r);
+    this.closePath();
+    return this;
+  };
+</script>
 
-      const loadTabContent = async (url, buttonId) => {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-          const content = await response.text();
-
-          tabContent.innerHTML = content;
-
-          // Initialize chart if canvas exists
-          if (document.getElementById('lineChart')) {
-            initializeLineChart();
-          }
-
-          // Update active button styles
-          tabButtons.forEach(btn => {
-            btn.classList.remove('active', 'bg-[#551895]', 'text-white');
-            btn.classList.add('bg-gray-200', 'text-gray-700');
-          });
-          document.getElementById(buttonId).classList.add('active', 'bg-[#551895]', 'text-white');
-          document.getElementById(buttonId).classList.remove('bg-gray-200', 'text-gray-700');
-
-        } catch (error) {
-          console.error('Error loading tab content:', error);
-          tabContent.innerHTML = `<p class="text-red-500">Failed to load content. Please try again.</p>`;
-        }
-      };
-
-      // Add click listeners
-      tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          loadTabContent(button.dataset.contentRoute, button.id);
-        });
-      });
-
-      // Load default tab on page load
-      const defaultTabButton = document.getElementById('interaction-mycampaign-tab');
-      if (defaultTabButton) {
-        loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
-      }
-    });
-  </script>
-</body>
+  </body>
 </html>

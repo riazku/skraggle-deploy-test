@@ -22,8 +22,6 @@
       </style>
 </head>
 
-
-
 <body>
 
 <div class="h-screen">
@@ -45,15 +43,14 @@
     </div>
 
     <div>
-     @include('components.user_tab')
+     @include('components.importuser_tab')
     </div>
 
 </div>
     
 
-
     {{-- Main Content Wrapper --}}
-    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'email' }">
+    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'importuser-email-tab' }">
          <div id="tab-content" class="mt-4">
         </div>
     </div>
@@ -86,14 +83,24 @@
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContent = document.getElementById('tab-content');
 
-        // Function to load content
+        // Enhanced loadTabContent function with better error handling
         const loadTabContent = async (url, buttonId) => {
             try {
+                // Show loading state
+                tabContent.innerHTML = '<p class="text-gray-600">Loading...</p>';
+                
+                console.log('Loading URL:', url); // Debug log
+                
                 const response = await fetch(url);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const content = await response.text();
+                
+                if (!content.trim()) {
+                    throw new Error('Received empty content');
+                }
+                
                 tabContent.innerHTML = content;
 
                 // Update active button styling
@@ -101,12 +108,21 @@
                     btn.classList.remove('active', 'bg-[#551895]', 'text-white');
                     btn.classList.add('bg-gray-200', 'text-gray-700');
                 });
-                document.getElementById(buttonId).classList.add('active', 'bg-[#551895]', 'text-white');
-                document.getElementById(buttonId).classList.remove('bg-gray-200', 'text-gray-700');
+                
+                const activeButton = document.getElementById(buttonId);
+                if (activeButton) {
+                    activeButton.classList.add('active', 'bg-[#551895]', 'text-white');
+                    activeButton.classList.remove('bg-gray-200', 'text-gray-700');
+                }
 
             } catch (error) {
                 console.error('Error loading tab content:', error);
-                tabContent.innerHTML = `<p class="text-red-500">Failed to load content. Please try again.</p>`;
+                tabContent.innerHTML = `
+                    <div class="p-4 text-red-500 bg-red-100 rounded">
+                        <p class="font-bold">Error loading content:</p>
+                        <p>${error.message}</p>
+                        <p class="mt-2 text-sm">URL attempted: ${url}</p>
+                    </div>`;
             }
         };
 
@@ -115,19 +131,29 @@
             button.addEventListener('click', () => {
                 const contentUrl = button.dataset.contentRoute;
                 const buttonId = button.id;
+                
+                if (!contentUrl) {
+                    console.error('No content route found for button:', buttonId);
+                    return;
+                }
+                
                 loadTabContent(contentUrl, buttonId);
             });
         });
 
-        // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('user-overview-tab');
+        // Load default tab content
+        const defaultTabButton = document.getElementById('importuser-email-tab');
+         // Check if the default tab button exists before trying to load content
         if (defaultTabButton) {
-            loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
+            const defaultUrl = defaultTabButton.dataset.contentRoute;
+            if (defaultUrl) {
+                loadTabContent(defaultUrl, 'recurring-email-tab');
+            } else {
+                console.error('No content route found for default tab');
+            }
         }
     });
 </script>
-
-
 
 </body>
 </html>

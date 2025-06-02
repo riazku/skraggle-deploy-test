@@ -75,12 +75,12 @@
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
                         <li><a href="{{ route('user.user') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Users</a></li>
-                        <li><a href="{{ route('revenue.revenue') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Renenue</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Site Activity</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Email Activity</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Ecommerce</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Catlog</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Exports</a></li>
+                        <li><a href="{{ route('revenue.revenue') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Revenue</a></li>
+                        <li><a href="{{ route ('siteactivity.siteactivity')}}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Site Activity</a></li>
+                        <li><a href=" {{ route('emailactivity.emailactivity') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Email Activity</a></li>
+                        <li><a href="{{ route('ecommerce.ecommerce') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Ecommerce</a></li>
+                        <li><a href="{{ route('catalog.catalog') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Catalog</a></li>
+                        <li><a href="{{ route('export.export') }}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Exports</a></li>
                     
                     </ul>
                 </li>
@@ -99,11 +99,11 @@
                     <ul x-show="openMenu === 'users'"
                         x-transition
                         class="px-4 py-2 bg-[#551895] rounded-lg mt-1">
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Segments & Lists</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">User Profile CRM</a></li>
+                        <li><a href="{{ route('segmentslists.segmentslists')}}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Segments & Lists</a></li>
+                        <li><a href="{{ route ('userprofile.userprofile')}}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">User Profile CRM</a></li>
                         
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Analytics</a></li>
-                        <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Import Users</a></li>
+                        <li><a href="{{ route ('analytics.analytics')}}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Analytics</a></li>
+                        <li><a href="{{route('importuser.importuser')}}" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Import Users</a></li>
                         
                         <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Settings</a></li>
                        

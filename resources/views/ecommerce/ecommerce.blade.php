@@ -45,7 +45,7 @@
     </div>
 
     <div>
-     @include('components.user_tab')
+     @include('components.ecommerce_tab')
     </div>
 
 </div>
@@ -53,7 +53,7 @@
 
 
     {{-- Main Content Wrapper --}}
-    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'email' }">
+    <div class=" w-[77%] mx-auto mt-45 ml-48">
          <div id="tab-content" class="mt-4">
         </div>
     </div>
@@ -120,7 +120,7 @@
         });
 
         // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('user-overview-tab');
+        const defaultTabButton = document.getElementById('ecommerce-overview-tab');
         if (defaultTabButton) {
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }

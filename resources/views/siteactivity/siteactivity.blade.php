@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    @vite('resources/css/app.css')
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
     <title>@yield('title', 'My Laravel App')</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{-- @vite('resources/css/app.css') --}}
-    
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     
     <style>
@@ -45,16 +42,33 @@
     </div>
 
     <div>
-     @include('components.user_tab')
+     @include('components.siteactivity_tab')
     </div>
 
 </div>
     
 
+             
+    
+
+    
+
+    {{-- Header --}}
+    {{-- @include('components.header') --}}
+
+    {{-- Navigation Menu --}}
+    {{-- @include('components.menu') --}}
+
+
 
     {{-- Main Content Wrapper --}}
-    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'email' }">
+    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'siteactivity-stats-tab' }">
+
+
+          
+       
          <div id="tab-content" class="mt-4">
+             {{-- @include('siteactivity.tabs.activity_tab') --}}
         </div>
     </div>
       
@@ -120,12 +134,24 @@
         });
 
         // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('user-overview-tab');
+        const defaultTabButton = document.getElementById('siteactivity-stats-tab');
         if (defaultTabButton) {
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }
     });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

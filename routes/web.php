@@ -1,17 +1,27 @@
 <?php
 
+use App\Http\Controllers\AnalyticsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Overviewtabcontroller;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\AutomationController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\EcommerceController;
+use App\Http\Controllers\EmailactivityController;
+use App\Http\Controllers\ExportController;
+use App\Http\Controllers\ImportuserController;
 use App\Http\Controllers\InteractionController;
 use App\Http\Controllers\MicropollController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RecurringController;
 use App\Http\Controllers\RevenueController;
+use App\Http\Controllers\SegmentslistController;
+use App\Http\Controllers\SiteactivityController;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserprofileController;
+  
 
 
 
@@ -116,6 +126,36 @@ Route::prefix('revenue/tabs')->name('revenue.tabs.')->group(function () {
 
 
 
+Route::get('/siteactivity/tabs/stats_tab', [SiteactivityController::class, 'getSitestatsContent'])->name('siteactivity.tabs.stats_tab');
+Route::get('/siteactivity/tabs/exports_tab', [SiteactivityController::class, 'getSiteexportContent'])->name('siteactivity.tabs.exports_tab');
+Route::get('/siteacitivity/tabs/events_tab', [SiteactivityController::class, 'getSiteeventContent'])->name('siteactivity.tabs.events_tab');
+Route::get('/siteactivity/tabs/activity_tab', [SiteactivityController::class, 'getSiteactivityContent'])->name('siteactivity.tabs.activity_tab');
+
+
+
+Route::get('/emailactivity/tabs/events_tab', [EmailactivityController::class, 'getEmaileventContent'])->name('emailactivity.tabs.events_tab');
+Route::get('/emailactivity/tabs/clicks_tab', [EmailactivityController::class, 'getEmailclickContent'])->name('emailactivity.tabs.clicks_tab');
+
+
+Route::get('/ecommerce/tabs/overview_tab', [EcommerceController::class, 'getEcommerceoverviewContent'])->name('ecommerce.tabs.overview_tab');
+Route::get('/ecommerce/tabs/conversions_tab', [EcommerceController::class, 'getEcommerceconversionsContent'])->name('ecommerce.tabs.conversions_tab');
+Route::get('/ecommerce/tabs/charts_tab', [EcommerceController::class, 'getEcommercechartContent'])->name('ecommerce.tabs.charts_tab');
+
+Route::get('/catalog/tabs/serach_terms_tab', [CatalogController::class, 'getCatalogsearchContent'])->name('catalog.tabs.search_terms_tab');
+Route::get('/catalog/tabs/items_tab', [CatalogController::class, 'getCatalogcategoryContent'])->name('catalog.tabs.items_tab');
+Route::get('/catalog/tabs/category', [CatalogController::class, 'getCatalogitemsContent'])->name('catalog.tabs.category_tab');
+
+Route::get('/segmentslists/tabs/mysegment_tab', [SegmentslistController::class, 'getSegmentlistmysegmentsContent'])->name('segmentslists.tabs.mysegment_tab');
+Route::get('/segmentslists/tabs/mylist_tab', [SegmentslistController::class, 'getSegmentlistmylistsContent'])->name('segmentslists.tabs.mylist_tab');
+Route::get('/segmentslists/tabs/default_tab', [SegmentslistController::class, 'getSegmentlistdefaultContent'])->name('segmentslists.tabs.default_tab');
+
+//userprofile tabs are present but not are not present
+//analyitucs tabs are present but not are not present
+
+Route::get('/importuser/tabs/manually_add_Email_tab', [ImportuserController::class, 'getImportuseremailContent'])->name('importuser.tabs.manually_add_email_tab');
+Route::get('/importuser/tabs/upload_csv_tab', [ImportuserController::class, 'getImportuseruploadContent'])->name('importuser.tabs.upload_csv_tab');
+
+
 
 Route::get('/campaigns', [CampaignController::class, 'campaigns'])->name('campaigns.campaigns');
 
@@ -137,4 +177,20 @@ Route::get('/user', [UserController::class, 'user'])->name('user.user');
 
 Route::get('/revenue', [RevenueController::class, 'revenue'])->name('revenue.revenue');
 
+Route::get('/siteactivity', [SiteactivityController::class, 'siteactivity'])->name('siteactivity.siteactivity');
 
+Route::get('/emailactivity', [EmailactivityController::class, 'emailactivity'])->name('emailactivity.emailactivity');
+
+Route::get('/ecommerce', [EcommerceController::class, 'ecommerce'])->name('ecommerce.ecommerce');
+
+Route::get('/catalog', [CatalogController::class, 'catalog'])->name('catalog.catalog');
+
+Route::get('/export', [ExportController::class, 'export'])->name('export.export');
+
+Route::get('/segmentslists', [SegmentslistController::class, 'segmentslists'])->name('segmentslists.segmentslists');
+
+Route::get('/userprofile', [UserprofileController::class, 'userprofile'])->name('userprofile.userprofile');
+
+Route::get('/analytics', [AnalyticsController::class, 'analytics'])->name('analytics.analytics');
+
+Route::get('/importuser', [ImportuserController::class, 'importuser'])->name('importuser.importuser');
