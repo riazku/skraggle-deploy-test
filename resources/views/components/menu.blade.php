@@ -108,6 +108,7 @@
                         <li><a href="#" class="block text-sm text-white hover:bg-purple-700 p-2.5 rounded">Settings</a></li>
                        
                     </ul>
+                    
                 </li>
 
                 <!-- Setup -->
