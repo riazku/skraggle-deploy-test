@@ -17,6 +17,8 @@
         id="segmentlist-mysegment-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('segmentslists.tabs.mysegment_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         My Segments
     </button>
@@ -24,6 +26,8 @@
         id="segmentlist-mylist-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('segmentslists.tabs.mylist_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         My Lists
     </button>
@@ -31,6 +35,8 @@
         id="segmentlist-defualt-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('segmentslists.tabs.default_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Defaults
     </button>

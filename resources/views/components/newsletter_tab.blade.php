@@ -15,30 +15,38 @@
 
     <button
         id="email-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('newsletter.tabs.news_email_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Email
     </button>
     <button
         id="push-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('newsletter.tabs.push_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Push
     </button>
 
     <button
         id="text-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('newsletter.tabs.text_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Text
     </button>
     <button
         id="whatsapp-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('newsletter.tabs.whatsapp_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Whatsapp
     </button>

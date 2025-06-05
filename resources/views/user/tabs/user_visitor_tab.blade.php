@@ -34,8 +34,8 @@
         <canvas id="lineChart" height="50"></canvas>
       </div>
     </div>
-
-   <script>
+{{-- 
+<script>
   const labels = ["03–07", "10–14", "17–21", "24–28"];
   const sentData = [5, 7, 9, 10];
 
@@ -145,7 +145,7 @@
     this.closePath();
     return this;
   };
-</script>
+</script> --}}
 
   </body>
 </html>

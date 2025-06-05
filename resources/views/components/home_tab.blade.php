@@ -13,27 +13,32 @@
   <div class="fixed z-20 top-[123px] left-[320px] right-0 z-10 bg-white">
     <div class="flex items-center space-x-4 px-8 py-4">
 
-        <button
+    <button
     id="overview-button"
-    class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+    class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
     data-content-route="{{ route('home.tabs.overview') }}"
-    data-tab-id="overview"
+    data-content-target="tab-content"
+    data-default-tab="true"
 >
     Overview
 </button>
 
 <button
-    class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+    id="getting-started-button"
+    class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
     data-content-route="{{ route('home.tabs.getstarted') }}"
-    data-tab-id="getstarted"
+    data-content-target="tab-content"
+    data-default-tab="true"
 >
     Getting Started
 </button>
 
 <button
-    class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+    id="cockpit-button"
+    class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
     data-content-route="{{ route('home.tabs.cockpit') }}"
-    data-tab-id="cockpit"
+    data-content-target="tab-content"
+         data-default-tab="true"
 >
     Cockpit
 </button>
@@ -43,12 +48,6 @@
 
     </div>
 </div>
-
-
-
-
-
-
 
 
 {{-- <div class="flex gap-2 mt-4" id="tab-buttons">

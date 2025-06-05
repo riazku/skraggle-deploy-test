@@ -9,14 +9,14 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     
-    <style>
+    {{-- <style>
 
       /* Custom styles for active tab */
       .tab-button.active {
         background-color: #551895; /* Example active background color */
         color: white; /* Example active text color */
       }
-      </style>
+      </style> --}}
 </head>
 
 
@@ -89,13 +89,13 @@
         {{-- <main class="flex-1 mt-[195px] ml-[190px] p-2">
             {{-- @include('components.container') --}}
              {{-- @include('components.overview') --}}
-            @yield('content')
+            {{-- @yield('content')
             
         </main> 
-    </div>
+    </div> --}}
 
     
-    <script>
+    {{-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContent = document.getElementById('tab-content');
@@ -139,9 +139,10 @@
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }
     });
-</script>
+</script> --}}
 
 
+<script src ={{ asset('js/tabs.js')}}></script>
 
 
 

@@ -19,6 +19,7 @@
                 <li class="mb-2">
                     <a href="#" class="flex items-center justify-center p-3 hover:bg-purple-800 rounded-full w-10 h-10">
                         <img src="{{ asset('images/Exclude.svg') }}" alt="Icon" class="h-6 w-6 object-contain">
+                        
                     </a>
                 </li>
                 <li class="mb-2">

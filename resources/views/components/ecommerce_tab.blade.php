@@ -17,6 +17,8 @@
         id="ecommerce-overview-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('ecommerce.tabs.overview_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
       Overview
     </button>
@@ -24,6 +26,8 @@
         id="ecommerce-consversion-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('ecommerce.tabs.conversions_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     > 
         Conversions
     </button>
@@ -32,6 +36,8 @@
         id="ecommerce-chart-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('ecommerce.tabs.charts_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Charts
     </button>

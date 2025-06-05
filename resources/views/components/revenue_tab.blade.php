@@ -11,15 +11,19 @@
       <div class="flex items-center space-x-4 px-8 py-4">
         <button
             id="revenue-campaign-tab"
-            class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+            class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
             data-content-route="{{ route('revenue.tabs.revenue_campaign_tab') }}"
+            data-content-target="tab-content"
+          data-default-tab="true"
         >
             Report by campaign type
         </button>
         <button
             id="revenue-report-tab"
-            class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+            class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
             data-content-route="{{ route('revenue.tabs.revenue_report_tab') }}"
+            data-content-target="tab-content"
+          data-default-tab="true"
         >
             Report by channel
         </button>

@@ -12,14 +12,14 @@
     
 
     
-    <style>
+    {{-- <style>
 
       /* Custom styles for active tab */
       .tab-button.active {
         background-color: #551895; /* Example active background color */
         color: white; /* Example active text color */
       }
-      </style>
+      </style> --}}
 </head>
 
 
@@ -53,10 +53,11 @@
 
 
     {{-- Main Content Wrapper --}}
-    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'email' }">
+    <div class=" w-[77%] mx-auto mt-45 ml-48">
          <div id="tab-content" class="mt-4">
         </div>
     </div>
+    <script src = {{asset('js/tabs.js')}}></script>
       
         {{-- @include('tabs.overview') --}}
         {{-- @include('tabs.cockpit') --}}
@@ -75,13 +76,11 @@
         {{-- <main class="flex-1 mt-[195px] ml-[190px] p-2">
             {{-- @include('components.container') --}}
              {{-- @include('components.overview') --}}
-            @yield('content')
-            
-        </main> 
-    </div>
+   
+             
 
     
-    <script>
+    {{-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContent = document.getElementById('tab-content');
@@ -125,7 +124,7 @@
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }
     });
-</script>
+</script> --}}
 
 </body>
 </html>

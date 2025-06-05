@@ -7,6 +7,7 @@
     <title>Campaigns</title>
   </head>
   <body>
+
     <div class="container mx-auto p-6">
       <!-- Tabs -->
       {{-- <div class="flex space-x-1 mb-6">
@@ -73,7 +74,7 @@
         <!-- Campaign Form -->
         <div class="mb-2 ">
           <label for="title" class="block text-sm font-medium text-gray-700"
-            >Campaign type</label
+            >Campaign type 1</label
           >
           <div class="mt-1 flex flex-wrap md:gap-0 gap-3 justify-between items-center">
             <div class="flex justify-start items-center w-[40%] rounded-md border border-gray-300 ">

@@ -53,7 +53,7 @@
 
 
     {{-- Main Content Wrapper --}}
-    <div class=" w-[77%] mx-auto mt-45 ml-48" x-data="{ activeTab: 'email' }">
+    <div class=" w-[77%] mx-auto mt-45 ml-48">
          <div id="tab-content" class="mt-4">
         </div>
     </div>
@@ -80,8 +80,10 @@
         </main> 
     </div>
 
+    <script src="{{ asset('js/tabs.js') }}"></script>
+
     
-    <script>
+    {{-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContent = document.getElementById('tab-content');
@@ -125,7 +127,7 @@
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }
     });
-</script>
+</script> --}}
 
 </body>
 </html>

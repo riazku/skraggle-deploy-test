@@ -15,29 +15,37 @@
 
     <button
         id="siteactivity-stats-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('siteactivity.tabs.stats_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Stats
     </button>
     <button
         id="siteactivity-activity-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('siteactivity.tabs.activity_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Activity
     </button>
      <button
         id="siteactivity-events-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('siteactivity.tabs.events_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Events
     </button>
     <button
         id="siteactivity-exports-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('siteactivity.tabs.exports_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Exports
     </button>

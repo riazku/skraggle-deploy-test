@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto p-6">
         <div class="bg-white p-6 rounded-lg border border-gray-300 shadow">
             <!-- Header and Search -->
             <div class="flex justify-end items-center mb-6">

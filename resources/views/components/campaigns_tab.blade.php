@@ -15,31 +15,41 @@
 
     <button
         id="email-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('campaigns.tabs.email_tab') }}"
+         data-content-target="tab-content"
+         data-default-tab="true"
+       
     >
         Email
     </button>
     <button
         id="intercaction-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('campaigns.tabs.interaction_tab') }}"
+         data-content-target="tab-content"
+         data-default-tab="true"
     >
         Interaction
     </button>
     <button
         id="webpush-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('campaigns.tabs.webpush_tab') }}"
+       data-content-target="tab-content"
+         data-default-tab="true"
     >
         Web Push
     </button> 
 
     <button
         id="survey-tab"
-        class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
+        class="tab-button text-black px-4 py-2 !border-1 !border-gray-200 rounded-md"
         data-content-route="{{ route('campaigns.tabs.survey_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
+
         Survey
     </button>
 

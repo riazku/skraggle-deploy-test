@@ -19,7 +19,7 @@
     
 
 
-          <div class="bg-[#FAFAFA] p-3 rounded-lg">
+          <div class="bg-[#FAFAFA] p-4 !rounded-xl  shadow-md">
             <div class="flex flex-wrap gap-2 mt-1">
               <h1 class="text-[#3F3F3F] font-bold text-[23px]">
                 Activity Overview
@@ -57,9 +57,9 @@
             </div>
 
             <!-- Container Grid Cards -->
-            <div class="grid md:grid-cols-2   grid-cols-1 gap-2 space-y-2 mt-5">
+            <div class="grid md:grid-cols-2   grid-cols-1 gap-2 gap-y-2 mt-5">
               <!-- Conversion -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-gray-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Conversion vs.
@@ -73,8 +73,8 @@
                   </div>
                 </div>
 
-                <div class="flex mt-2 gap-2 justify-start items-start">
-                  <div class="w-[50%] h-full bg-[#EEEAFF] rounded-md gap-2 p-3">
+                <div class="flex mt-2 gap-2 justify-start items-start ">
+                  <div class="w-[50%] h-full bg-[#EEEAFF] rounded-md gap-2 p-3 ">
                     <h2 class="text-[#551895]">Total</h2>
                     <div class="flex justify-start mt-6 items-center gap-3">
                       <h1 class="text-[35px] text-[#551895] font-bold">175</h1>
@@ -100,7 +100,7 @@
               </div>
 
               <!-- Revenue vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Revenue vs.
@@ -114,7 +114,7 @@
                   </div>
                 </div>
 
-                <div class="flex mt-2 gap-2 justify-start items-start">
+                <div class="flex mt-2 gap-2 justify-start items-start ">
                   <div class="w-[50%] h-full bg-[#EEEAFF] rounded-md gap-2 p-3">
                     <h2 class="text-[#551895]">Total</h2>
                     <div class="flex justify-start mt-6 items-center gap-3">
@@ -141,7 +141,7 @@
               </div>
 
               <!-- Shopping Carts vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Shopping Carts vs.
@@ -182,7 +182,7 @@
               </div>
 
               <!-- Average Order Value vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Average Order Value vs.
@@ -235,9 +235,9 @@
             </div>
 
             <!-- Container Grid Cards -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 space-y-2 mt-5">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 gap-y-2 mt-5">
               <!-- Main List vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Main List vs.
@@ -278,7 +278,7 @@
               </div>
 
               <!-- Push Subscribers vs.   -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Push Subscribers vs.
@@ -319,7 +319,7 @@
               </div>
 
               <!-- Shopping Carts vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Shopping Carts vs.
@@ -360,7 +360,7 @@
               </div>
 
               <!-- Average Order Value vs.  -->
-              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3">
+              <div class="border-1 border-[#CAD7EC] rounded-2xl h-[180px] p-3 !border-1 border-300 !rounded-lg">
                 <div class="flex items-center gap-2">
                   <h1 class="text-[#3F3F3F] text-[15px] font-semibold">
                     Average Order Value vs.
@@ -402,126 +402,285 @@
             </div>
 
 
-          <div>
-            <h2 class="text-[#3F3F3F] font-medium text-[20px]">Running Compagaigns</h2>
-            <div class="grid grid-cols-2 justify-center  items-center  gap-6">
 
-        
-         
-        <div class="overflow-x-auto  bg-[#FFFFFF] !rounded-lg">
-  <table class="min-w-full border-separate  !rounded-lg border-spacing-y-2">
-    <thead>
-      <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
-        <th class="px-4 py-4 flex gap-1 rounded-lg">
-          <input type="checkbox" />
-          <span class="ml-2 font-semibold ">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
-        </th>
-        <th class="px-4 py-2 font-semibold">Type</th>
-        <th class="px-4 py-2 font-semibold">Status</th>
-        <th class="px-4 py-2 font-semibold">Actions</th>
-      </tr>
-    </thead>
-    <tbody class="text-sm text-gray-700 ">
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-medium">Google Inc.</td>
-      </tr>
-    <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-    </tbody>
-  </table>
+
+          {{-- <div>
+            <h2 class="text-[#3F3F3F] font-medium text-[20px] py-2">Running Compagaigns</h2>
+              <div class="grid grid-cols-2 justify-center  items-center  gap-6">
+                <div class="overflow-x-auto !rounded-lg">
+                  <table class="min-w-full border-separate bg-white shadow-sm !rounded-lg border-spacing-y-2">
+                    <thead>
+                      <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
+                        <th class="px-4 py-4 flex gap-1 bg-[#DDD7F5]  !rounded-b-none !rounded-l-lg">
+                          <input type="checkbox" />
+                          <span class="ml-2 font-semibold ">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
+                        </th>
+                        <th class="px-4 py-2 font-semibold bg-[#DDD7F5]">Type</th>
+                        <th class="px-4 py-2 font-semibold bg-[#DDD7F5]">Status</th>
+                        <th class="px-4 py-2 font-semibold bg-[#DDD7F5] !rounded-b-none !rounded-r-lg">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-700 ">
+                      <tr class="bg-white shadow rounded-lg">
+                        <td class="px-4 py-4 flex items-center">
+                          <input type="checkbox" />
+                          <span class="ml-2">Group-DB303GF</span>
+                        </td>
+                        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                        <td class="px-4 py-2 font-medium">Google Inc.</td>
+                      </tr>
+                    <tr class="bg-white shadow rounded-lg">
+                        <td class="px-4 py-4 flex items-center">
+                          <input type="checkbox" />
+                          <span class="ml-2">Group-DB303GF</span>
+                        </td>
+                        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                        <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                      </tr>
+                      <tr class="bg-white shadow rounded-lg">
+                        <td class="px-4 py-4 flex items-center">
+                          <input type="checkbox" />
+                          <span class="ml-2">Group-DB303GF</span>
+                        </td>
+                        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                        <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                      </tr>
+                      <tr class="bg-white shadow rounded-lg">
+                        <td class="px-4 py-4 flex items-center">
+                          <input type="checkbox" />
+                          <span class="ml-2">Group-DB303GF</span>
+                        </td>
+                        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                        <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="overflow-x-auto !rounded-lg">
+                    <table class="min-w-full border-separate bg-white shadow-sm !rounded-lg border-spacing-y-2">
+                      <thead>
+                        <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
+                          <th class="px-4 py-4 flex gap-1 bg-[#DDD7F5]  !rounded-b-none !rounded-l-lg">
+                            <input type="checkbox" />
+                            <span class="ml-2 font-semibold ">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
+                          </th>
+                          <th class="px-4 py-2 font-semibold  bg-[#DDD7F5]">Type</th>
+                          <th class="px-4 py-2 font-semibold  bg-[#DDD7F5]">Status</th>
+                          <th class="px-4 py-2 font-semibold  bg-[#DDD7F5]  !rounded-b-none !rounded-r-lg">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-sm text-gray-700 ">
+                        <tr class="bg-white shadow rounded-lg">
+                          <td class="px-4 py-4 flex items-center">
+                            <input type="checkbox" />
+                            <span class="ml-2">Group-DB303GF</span>
+                          </td>
+                          <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                          <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                          <td class="px-4 py-2 font-medium">Google Inc.</td>
+                        </tr>
+                      <tr class="bg-white shadow rounded-lg">
+                          <td class="px-4 py-4 flex items-center">
+                            <input type="checkbox" />
+                            <span class="ml-2">Group-DB303GF</span>
+                          </td>
+                          <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                          <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                          <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                        </tr>
+                        <tr class="bg-white shadow rounded-lg">
+                          <td class="px-4 py-4 flex items-center">
+                            <input type="checkbox" />
+                            <span class="ml-2">Group-DB303GF</span>
+                          </td>
+                          <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                          <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                          <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                        </tr>
+                        <tr class="bg-white shadow rounded-lg">
+                          <td class="px-4 py-4 flex items-center">
+                            <input type="checkbox" />
+                            <span class="ml-2">Group-DB303GF</span>
+                          </td>
+                          <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
+                          <td class="px-4 py-2 text-gray-500">22/10/2022</td>
+                          <td class="px-4 py-2 font-semibold">Google Inc.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>    
+            </div>
+        </div> --}}
+
+  <div>
+  <h2 class="text-[#3F3F3F] font-medium text-[20px] py-2">Running Compagaigns</h2>
+  <div class="grid grid-cols-2 justify-center items-center gap-6">
+    <!-- First Card -->
+    <div class="overflow-hidden rounded-xl shadow-sm bg-white"> <!-- Changed to rounded-xl for smoother corners -->
+      <table class="min-w-full border-separate border-spacing-0"> <!-- border-spacing-0 for perfect rounding -->
+        <thead>
+          <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
+            <th class="px-4 py-4 flex gap-1 rounded-tl-xl"> <!-- Top-left rounded -->
+              <input type="checkbox" />
+              <span class="ml-2 font-semibold">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
+            </th>
+            <th class="px-4 py-2 font-semibold">Type</th>
+            <th class="px-4 py-2 font-semibold">Status</th>
+            <th class="px-4 py-2 font-semibold rounded-tr-xl"> <!-- Top-right rounded -->
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody class="text-sm text-gray-700">
+          <!-- First 3 rows -->
+          <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100">
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-medium border-t border-gray-100">Google Inc.</td>
+          </tr>
+          <!-- Additional rows... -->
+          
+          <!-- Last row with bottom rounding -->
+          <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100 rounded-bl-xl"> <!-- Bottom-left rounded -->
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-semibold border-t border-gray-100 rounded-br-xl"> <!-- Bottom-right rounded -->
+              Google Inc.
+            </td>
+          </tr>
+
+          <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100 rounded-bl-xl"> <!-- Bottom-left rounded -->
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-semibold border-t border-gray-100 rounded-br-xl"> <!-- Bottom-right rounded -->
+              Google Inc.
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Second Card (same structure as first) -->
+    <div class="overflow-hidden rounded-xl shadow-sm bg-white">
+      <table class="min-w-full border-separate border-spacing-0">
+        <thead>
+          <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
+            <th class="px-4 py-4 flex gap-1 rounded-tl-xl">
+              <input type="checkbox" />
+              <span class="ml-2 font-semibold">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
+            </th>
+            <th class="px-4 py-2 font-semibold">Type</th>
+            <th class="px-4 py-2 font-semibold">Status</th>
+            <th class="px-4 py-2 font-semibold rounded-tr-xl">
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody class="text-sm text-gray-700">
+          <!-- Rows... -->
+          <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100 rounded-bl-xl">
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-semibold border-t border-gray-100 rounded-br-xl">
+              Google Inc.
+            </td>
+          </tr>
+
+           <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100 rounded-bl-xl">
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-semibold border-t border-gray-100 rounded-br-xl">
+              Google Inc.
+            </td>
+          </tr>
+
+           <tr class="bg-white">
+            <td class="px-4 py-4 flex items-center border-t border-gray-100 rounded-bl-xl">
+              <input type="checkbox" />
+              <span class="ml-2">Group-DB303GF</span>
+            </td>
+            <td class="px-4 py-2 text-purple-700 font-semibold border-t border-gray-100">Survey</td>
+            <td class="px-4 py-2 text-gray-500 border-t border-gray-100">22/10/2022</td>
+            <td class="px-4 py-2 font-semibold border-t border-gray-100 rounded-br-xl">
+              Google Inc.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
-<div class="overflow-x-auto  bg-[#FFFFFF] !rounded-lg">
-  <table class="min-w-full border-separate  !rounded-lg border-spacing-y-2">
-    <thead>
-      <tr class="bg-[#DDD7F5] text-[#551895] text-purple-700 text-left text-sm">
-        <th class="px-4 py-4 flex gap-1 rounded-lg">
-          <input type="checkbox" />
-          <span class="ml-2 font-semibold ">Campaign Title </span><img src="./assets/img/arrow.svg" alt="">
-        </th>
-        <th class="px-4 py-2 font-semibold">Type</th>
-        <th class="px-4 py-2 font-semibold">Status</th>
-        <th class="px-4 py-2 font-semibold">Actions</th>
-      </tr>
-    </thead>
-    <tbody class="text-sm text-gray-700 ">
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-medium">Google Inc.</td>
-      </tr>
-    <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-      <tr class="bg-white shadow rounded-lg">
-        <td class="px-4 py-4 flex items-center">
-          <input type="checkbox" />
-          <span class="ml-2">Group-DB303GF</span>
-        </td>
-        <td class="px-4 py-2 text-purple-700 font-semibold">Survey</td>
-        <td class="px-4 py-2 text-gray-500">22/10/2022</td>
-        <td class="px-4 py-2 font-semibold">Google Inc.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
-   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           </div>
 
 
-          </div>
 
         </div>
       </div>

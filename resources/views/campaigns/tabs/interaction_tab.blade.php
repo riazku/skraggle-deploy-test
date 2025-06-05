@@ -16,7 +16,7 @@
 <body>
 
 
-    <div class="rounded-lg p-2 mt-3 border-1 border-[#CAD7EC] rounded-lg ">
+    <div class="rounded-lg p-3 mt-6 !border-1 !border-[#CAD7EC] rounded-lg  ">
             <h2 class="text-[#3F3F3F] ">
               Retarget abandoned carts, retarget lost visitors, ask for purchase
               reviews or simply say with our email already set campaigns.

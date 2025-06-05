@@ -17,6 +17,8 @@
         id="importuser-email-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('importuser.tabs.manually_add_email_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Manually Add Emails
     </button>
@@ -24,6 +26,8 @@
         id="importuser-upload-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('importuser.tabs.upload_csv_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Upload CSV
     </button>

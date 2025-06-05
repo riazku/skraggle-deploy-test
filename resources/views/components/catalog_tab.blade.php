@@ -17,6 +17,8 @@
         id="catalog-search-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('catalog.tabs.search_terms_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Search Terms
     </button>
@@ -24,6 +26,8 @@
         id="catalog-items-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('catalog.tabs.items_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Items
     </button>
@@ -31,6 +35,8 @@
         id="catalog-cateogory-tab"
         class="tab-button bg-gray-200 text-gray-700 px-4 py-2 rounded-md focus:outline-none"
         data-content-route="{{ route('catalog.tabs.category_tab') }}"
+        data-content-target="tab-content"
+          data-default-tab="true"
     >
         Cateogory
     </button>

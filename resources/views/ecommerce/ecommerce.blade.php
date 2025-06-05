@@ -56,7 +56,7 @@
     <div class=" w-[77%] mx-auto mt-45 ml-48">
          <div id="tab-content" class="mt-4">
         </div>
-    </div>
+    
       
         {{-- @include('tabs.overview') --}}
         {{-- @include('tabs.cockpit') --}}
@@ -75,13 +75,10 @@
         {{-- <main class="flex-1 mt-[195px] ml-[190px] p-2">
             {{-- @include('components.container') --}}
              {{-- @include('components.overview') --}}
-            @yield('content')
             
-        </main> 
-    </div>
 
     
-    <script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContent = document.getElementById('tab-content');
@@ -125,9 +122,9 @@
             loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
         }
     });
-</script>
+</script> --}}
 
-
+<script src="{{ asset('js/tabs.js') }}"></script>
 
 </body>
 </html>

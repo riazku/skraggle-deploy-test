@@ -17,11 +17,27 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RecurringController;
 use App\Http\Controllers\RevenueController;
 use App\Http\Controllers\SegmentslistController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SiteactivityController;
+use App\Http\Controllers\SetupController;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserprofileController;
-  
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\CouponcodesController;
+use App\Http\Controllers\WebpushController;
+use App\Http\Controllers\ActivityfeedController;   
+use App\Http\Controllers\DataimportController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\IntegrationController;
+use App\Http\Controllers\AlgorithmController;
+use App\Http\Controllers\AccountinfoController;
+use App\Http\Controllers\AccountsettingController;
+use App\Http\Controllers\AccounthistoryController;
+use App\Http\Controllers\EmailsettingController;
+use App\Http\Controllers\AccessController;
+use App\Http\Controllers\MyprofileController;
+use App\HTTP\Controllers\BilingController;
 
 
 
@@ -33,7 +49,7 @@ use App\Http\Controllers\UserprofileController;
 
 Route::get('/', function () {
     return view('home.home');
-});
+})->name('home.home');
 
 // Route::get('/', function () {
 //     return view('campaigns.campaigns');
@@ -157,6 +173,73 @@ Route::get('/importuser/tabs/upload_csv_tab', [ImportuserController::class, 'get
 
 
 
+Route::get('/setting/tabs/attributes_tab', [SettingsController::class, 'getAttributeContent'])->name('setting.tabs.attributes_tab');
+Route::get('/setting/tabs/opt-in_tab', [SettingsController::class, 'getOptinContent'])->name('setting.tabs.opt-in_tab');
+Route::get('/setting/tabs/limits_tab', [SettingsController::class, 'getLimitsContent'])->name('setting.tabs.limits_tab');
+
+
+Route::get('/setup_catalog/tabs/catalog_tab', [SetupController::class, 'getSetupCatalogContent'])->name('setup_catalog.tabs.catalog_tab');
+Route::get('/setup_catalog/tabs/parsing_tab', [SetupController::class, 'getSetupparsingContent'])->name('setup_catalog.tabs.parsing_tab');
+Route::get('/setup_catalog/tabs/autofeed_tab', [SetupController::class, 'getSetupautofeedContent'])->name('setup_catalog.tabs.autofeed_tab');
+Route::get('/setup_catalog/tabs/datafeed_tab', [SetupController::class, 'getSetupdatafeedContent'])->name('setup_catalog.tabs.datafeed_tab');
+Route::get('/setup_catalog/tabs/export_tab', [SetupController::class, 'getSetupexportcontent'])->name('setup_catalog.tabs.export_tab');
+Route::get('/setup_catalog/tabs/preview_tab', [SetupController::class, 'getSetuppreviewContent'])->name('setup_catalog.tabs.preview_tab');
+
+
+Route::get('/gallery/tabs/discover_tab', [GalleryController::class, 'getGallerydiscoverContent'])->name('gallery.tabs.discover_tab');
+Route::get('/gallery/tabs/private_tab', [GalleryController::class, 'getGalleryprivateContent'])->name('gallery.tabs.private_tab');
+
+
+Route::get('/activityfeed/tabs/flow_tab', [ActivityfeedController::class, 'getActivityfeedflowContent'])->name('activityfeed.tabs.flow_tab');
+Route::get('/activityfeed/tabs/playground_tab', [ActivityfeedController::class, 'getActivityfeedplaygroundContent'])->name('activityfeed.tabs.playground_tab');
+
+
+Route::get('/dataimports/tabs/oldpurchase_tab', [DataimportController::class, 'getDataimportoldpurchaseContent'])->name('dataimports.tabs.oldpurchase_tab');
+Route::get('/dataimports/tabs/autoimport_tab', [DataimportController::class, 'getDataimportautoimportContent'])->name('dataimports.tabs.autoimport_tab');
+
+
+Route::get('/pages/tabs/translate_tab', [PagesController::class, 'getPagestranslateContent'])->name('pages.tabs.translate_tab');
+Route::get('/pages/tabs/customdomain_tab', [PagesController::class, 'getPagescustomdomainContent'])->name('pages.tabs.customdomain_tab');
+
+
+Route::get('/algorithms/tabs/setting_tab', [AlgorithmController::class, 'getAlgorithmsettingContent'])->name('algorithms.tabs.setting_tab');
+Route::get('/algorithms/tabs/crosssell_tab', [AlgorithmController::class, 'getAlgorithmcrosssellContent'])->name('algorithms.tabs.crosssell_tab');
+Route::get('/algorithms/tabs/product_tab', [AlgorithmController::class, 'getAlgorithmproductContent'])->name('algorithms.tabs.product_tab');
+Route::get('/algorithms/tabs/test_tab', [AlgorithmController::class, 'getAlgorithmtestContent'])->name('algorithms.tabs.test_tab');
+
+
+Route::get('/accountinfo/tabs/info_tab', [AccountinfoController::class, 'getAccountinfoContent'])->name('accountinfo.tabs.info_tab');
+Route::get('/accountinfo/tabs/notification_tab', [AccountinfoController::class, 'getAccountnotificationContent'])->name('accountinfo.tabs.notification_tab');
+Route::get('/accountinfo/tabs/code_tab', [AccountinfoController::class, 'getAccountcodeContent'])->name('accountinfo.tabs.code_tab');
+Route::get('/accountinfo/tabs/api_tab', [AccountinfoController::class, 'getAccountapiContent'])->name('accountinfo.tabs.api_tab');
+
+Route::get('/accountsetting/tabs/setting_tab', [AccountsettingController::class, 'getAccountsettingContent'])->name('accountsetting.tabs.setting_tab');
+Route::get('/accountsetting/tabs/jsintegration_tab', [AccountsettingController::class, 'getAccountjsintegrationContent'])->name('accountsetting.tabs.jsintegration_tab');
+Route::get('/accountsetting/tabs/advance_tab', [AccountsettingController::class, 'getAccountjsadvanceContent'])->name('accountsetting.tabs.advance_tab');
+Route::get('/accountsetting/tabs/tracking_tab', [AccountsettingController::class, 'getAccounttrackingContent'])->name('accountsetting.tabs.tracking_tab');
+
+
+Route::get('/myprofile/tabs/profile_tab', [MyprofileController::class, 'getMyprofileContent'])->name('myprofile.tabs.profile_tab');
+Route::get('/myprofile/tabs/access_tab', [MyprofileController::class, 'getMyprofileaccessContent'])->name('myprofile.tabs.access_tab');
+
+
+
+Route::get('/biling/tabs/usage_tab', [BilingController::class, 'getBilingusageContent'])->name('biling.tabs.usage_tab');
+Route::get('/biling/tabs/history_tab', [BilingController::class, 'getBilinghistoryContent'])->name('biling.tabs.history_tab');
+Route::get('/biling/tabs/info_tab', [BilingController::class, 'getBilinginfoContent'])->name('biling.tabs.info_tab');
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/campaigns', [CampaignController::class, 'campaigns'])->name('campaigns.campaigns');
 
 Route::get('/automation', [AutomationController::class, 'automation'])->name('automation.automation');
@@ -194,3 +277,37 @@ Route::get('/userprofile', [UserprofileController::class, 'userprofile'])->name(
 Route::get('/analytics', [AnalyticsController::class, 'analytics'])->name('analytics.analytics');
 
 Route::get('/importuser', [ImportuserController::class, 'importuser'])->name('importuser.importuser');
+
+Route::get('/setting', [SettingsController::class, 'settings'])->name('setting.settings');
+
+Route::get('/setup', [SetupController::class, 'setup'])->name('setup_catalog.setup');
+
+Route::get('/gallery', [GalleryController::class, 'gallery'])->name('gallery.gallery');
+
+Route::get('/couponcodes', [CouponcodesController::class, 'couponcodes'])->name('couponcodes.couponcodes');
+
+Route::get('/webpush', [WebpushController::class, 'webpush'])->name('webpush.webpush');
+
+Route::get('/activityfeed', [ActivityfeedController::class, 'activityfeed'])->name('activityfeed.activityfeed');
+
+Route::get('/dataimport', [DataimportController::class, 'dataimport'])->name('dataimport.dataimport');
+
+Route::get('/pages', [PagesController::class, 'pages'])->name('pages.pages');
+
+Route::get('/integration', [IntegrationController::class, 'integration'])->name('integration.integration');
+
+Route::get('/algorithms', [AlgorithmController::class, 'algorithms'])->name('algorithms.algorithms');
+
+Route::get('/accountinfo', [AccountinfoController::class, 'accountinfo'])->name('accountinfo.accountinfo');
+
+Route::get('/accountsetting', [AccountsettingController::class, 'accountsetting'])->name('accountsetting.accountsetting');
+
+Route::get('/accounthistory', [AccounthistoryController::class, 'accounthistory'])->name('accounthistory.accounthistory');
+
+Route::get('/emailsetting', [EmailsettingController::class, 'emailsetting'])->name('emailsetting.emailsetting');
+
+Route::get('/access', [AccessController::class, 'access'])->name('access.access');
+
+Route::get('/myprofile', [MyprofileController::class, 'myprofile'])->name('myprofile.myprofile');
+
+Route::get('/biling', [BilingController::class, 'biling'])->name('biling.biling');
