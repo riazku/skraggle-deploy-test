@@ -4,11 +4,8 @@ providers = ["php", "node"]
 nixPkgs = [
   "php82",
   "php82Packages.composer",
-  "nodejs_20",
-  "git",
-  "unzip",
-  "curl",
-  "libzip",
+  "nodejs_20",               # ✅ modern Node version avoids Python issues
+  "git", "unzip", "curl", "libzip",
   "php82Extensions.mbstring",
   "php82Extensions.curl",
   "php82Extensions.zip",
