@@ -78,51 +78,7 @@
             
 
     
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContent = document.getElementById('tab-content');
 
-        // Function to load content
-        const loadTabContent = async (url, buttonId) => {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const content = await response.text();
-                tabContent.innerHTML = content;
-
-                // Update active button styling
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('active', 'bg-[#551895]', 'text-white');
-                    btn.classList.add('bg-gray-200', 'text-gray-700');
-                });
-                document.getElementById(buttonId).classList.add('active', 'bg-[#551895]', 'text-white');
-                document.getElementById(buttonId).classList.remove('bg-gray-200', 'text-gray-700');
-
-            } catch (error) {
-                console.error('Error loading tab content:', error);
-                tabContent.innerHTML = `<p class="text-red-500">Failed to load content. Please try again.</p>`;
-            }
-        };
-
-        // Add click listeners to tab buttons
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const contentUrl = button.dataset.contentRoute;
-                const buttonId = button.id;
-                loadTabContent(contentUrl, buttonId);
-            });
-        });
-
-        // Load default tab content on initial page load (e.g., Overview)
-        const defaultTabButton = document.getElementById('ecommerce-overview-tab');
-        if (defaultTabButton) {
-            loadTabContent(defaultTabButton.dataset.contentRoute, defaultTabButton.id);
-        }
-    });
-</script> --}}
 
 <script src="{{ asset('js/tabs.js') }}"></script>
 
