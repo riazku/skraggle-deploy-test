@@ -11,4 +11,12 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        outDir: 'dist', // 👈 Add this line
+        emptyOutDir: true,
+        manifest: true,
+        rollupOptions: {
+            input: 'resources/js/app.js', // or your main entry point
+        },
+    },
 });
