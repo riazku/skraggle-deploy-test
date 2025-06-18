@@ -1,23 +1,23 @@
-providers = ["php", "node"]
-
 [phases.setup]
 nixPkgs = [
-  "php82",
-  "php82Packages.composer",
-  "nodejs_20",               # ✅ modern Node version avoids Python issues
-  "git", "unzip", "curl", "libzip",
-  "php82Extensions.mbstring",
-  "php82Extensions.curl",
-  "php82Extensions.zip",
-  "php82Extensions.pdo_mysql"
+    "php80",
+    "php80Extensions.curl",
+    "php80Extensions.mbstring",
+    "php80Extensions.openssl",
+    "php80Extensions.pdo_mysql",
+    "php80Extensions.tokenizer",
+    "php80Extensions.xml",
+    "php80Extensions.fileinfo",
+    "php80Extensions.sodium",
+    "composer",
+    "nodejs-18_x",
+    "yarn"
 ]
 
-[phases.install]
-cmds = [
-  "composer install --no-dev --optimize-autoloader",
-  "npm install",
-  "npm run build"
+[phases.build]
+commands = [
+    "composer install --no-dev",
+    "yarn install",
+    "php artisan key:generate",
+    "php artisan storage:link"
 ]
-
-[start]
-cmd = "php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
