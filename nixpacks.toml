@@ -18,6 +18,5 @@ nixPkgs = [
 commands = [
     "composer install --no-dev",
     "yarn install",
-    "php artisan key:generate",
-    "php artisan storage:link"
+    "php artisan key: generate"
 ]
